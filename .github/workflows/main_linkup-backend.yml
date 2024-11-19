@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy Node.js app to Azure Web App - LinkUp-Backend
+name: Build and deploy Node.js app to Azure Web App - LinkUp-backend
 
 on:
   push:
@@ -57,15 +57,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_C7D78F4AD6A140FDAEF225A06AB8FF82 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5F2169DC71EB4F22958417DFCBE7D0B3 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_09D4392AADC6419AB004344B94EE66AC }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DC5B17B3B3D544E7A58D054DBF42CF9C }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_ACC0A427A2154F7B84859F511A01B319 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_BEB6B1CBBA8A4A27952F30875899F12F }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'LinkUp-Backend'
+          app-name: 'LinkUp-backend'
           slot-name: 'Production'
           package: .
           
